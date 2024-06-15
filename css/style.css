@@ -1,0 +1,51 @@
+:root{
+    --main-color:white;
+}
+body{
+    background-color: #24353f;
+    font-family: 'Titillium Web', sans-serif;
+}
+.box-shadow{
+    box-shadow: -5px 2px 54px -9px rgba(0, 0, 0, 1);
+}
+h1{
+    color: #17a2b8;
+    font-size: 40px;
+
+}
+.form-control{
+    background-color: transparent;
+    color: var(--main-color);
+    
+}
+
+.form-control:focus{
+    background-color: transparent;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 ;
+    color: #fff ;
+}
+.form-control::placeholder{
+    color: gray;
+}
+.sign{
+    color: var(--main-color);
+}
+.sign a{
+    text-decoration: none;
+    color: var(--main-color);
+}
+.sign a:hover{
+text-decoration: underline var(--main-color);
+}
+
+/* home page third page */
+/* nav bar */
+.navbar-brand{
+    color: var(--main-color);
+}
+
+.logOut-btn{
+    text-decoration: none;
+}
