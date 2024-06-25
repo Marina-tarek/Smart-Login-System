@@ -25,17 +25,35 @@
     <main class="container my-5">
         <div class="box-shadow m-auto p-5 w-75 text-center">
             <h1 class="fw-medium text-capitalize">Smart Login System</h1>
-            <div class="w-100">
-                <input type="text" id="signUpName" placeholder="Enter your name" class="form-control w-100 my-3 rounded-1">
-            </div>
-            <div class="w-100">
-                <input type="text" id="signUpEmail" placeholder="Enter your email" class="form-control w-100 my-3 rounded-1">
-            </div>
-            <div class="w-100">
-                <input type="text" id="signUpPassword" placeholder="Enter your password" class="form-control w-100 my-3 rounded-1">
-            </div>
-            <p></p>
-            <button class="btn w-100 btn-outline-info my-3 rounded-1 text-capitalize">sign up</button>
+            <form action="">
+                <div class="w-100">
+                    <input type="text" id="signUpName" placeholder="Enter your name"
+                        class="form-control w-100 my-3 rounded-1">
+                        <ul class="invalid-feedback text-start">
+                            <li>Name Is Required</li>
+                            <li>Must writer two characters at least</li>
+                        </ul>
+
+                </div>
+                <div class="w-100">
+                    <input type="email" id="signUpEmail" placeholder="Enter your email"
+                        class="form-control w-100 my-3 rounded-1">
+                        <p class="invalid-feedback text-start">email Is Required</p>
+                </div>
+                <div class="w-100">
+                    <input type="password" id="signUpPassword" placeholder="Enter your password"
+                        class="form-control w-100 my-3 rounded-1">
+                        <ul class="invalid-feedback text-start">
+                            <li>password Is Required</li>
+                            <li>Minimum eight characters, at least one letter and one number</li>
+                        </ul>
+                 
+                </div>
+                <div id="msg"></div>
+                <button id="signUpBtn" class="btn w-100 btn-outline-info my-3 rounded-1 text-capitalize">sign
+                    up</button>
+            </form>
+
             <p class="sign">Don’t have an account? <a href="index.html" class="text-capitalize">Signin</a></p>
 
         </div>
