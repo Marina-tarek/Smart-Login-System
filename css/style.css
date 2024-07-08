@@ -15,7 +15,9 @@ h1 {
     color: #17a2b8;
     font-size: 40px;
 }
-
+.btn{
+    transition: all 0.3s ease;
+}
 .form-control {
     background-color: transparent;
     color: var(--main-color);
@@ -56,6 +58,7 @@ h1 {
 .logOut-btn {
     text-decoration: none;
     padding: 8px;
+
 }
 .content span{
     color: var(--main-color);
