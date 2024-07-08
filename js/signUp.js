@@ -12,20 +12,21 @@ else {
 // ===>prevent defult to form
 form.addEventListener("submit", function (event) {
     event.preventDefault();
-    if (isValid === true) {
+    if (validationName() && validationEmail() && validationPassword()) {
         setForm();
     } else {
         document.getElementById("msg").innerHTML = `<p class="text-danger">All inputs is required</p>`;
     }
+
 });
 
-form.addEventListener("input", function () {
-    if (validationName() && validationEmail() && validationPassword()) {
-        isValid = true
-    } else {
-        isValid = false
-    }
-})
+// form.addEventListener("input", function () {
+//     if (validationName() && validationEmail() && validationPassword()) {
+//         isValid = true
+//     } else {
+//         isValid = false
+//     }
+// })
 
 
 
@@ -54,8 +55,8 @@ function validationName() {
     }
 }
 function validationEmail() {
-    // /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/
-    const regexStyle = /^[a-zA-Z]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+   
+    const regexStyle =/^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
     if (regexStyle.test(inputs[1].value.toLowerCase())) {
         inputs[1].classList.add("is-valid")
         inputs[1].classList.remove("is-invalid")
