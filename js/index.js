@@ -16,40 +16,28 @@ else {
 // ===>prevent defult to form
 form.addEventListener("submit", function (event) {
     event.preventDefault();
-    if (isValid === true) {
-        setForm();
-    } else {
-        document.getElementById("msg").innerHTML = `<p class="text-danger">All inputs is required</p>`;
-    }
+    checkValidity()
+    // if (isValid === true) {
+    //     checkValidity();
+    // } else {
+    //     document.getElementById("msg").innerHTML = `<p class="text-danger">All inputs is required</p>`;
+    // }
 });
 
+function checkValidity(){
+ const data = {
+            signInEmail:signInEmail.value,
+            signInPassword:signInPassword.value,
+        }
 
-// checkValidity()
-// try {
-//     if (signInEmail == "" && signInPassword=="") throw `<p class="text-danger">All inputs is required</p>`
- 
-//     else {
-//         checkWeather(searchLocation.value);
-//         anotherDays(searchLocation.value);
-//     }
-// }
-// catch (err) {
-//     document.getElementById("msg").innerHTML =  err;
-// }
+        console.log(data)
+        for (let i = 0; i <signUpArray.length; i++) {
+            if (signUpArray[i].email.toLowerCase()==data.signInEmail.toLowerCase() &&signUpArray[i].password.toLowerCase() ==data.signInPassword.toLowerCase()) {
+                location.href="./home.html";
+                // document.getElementById("msg").innerHTML = `<p class="text-danger">corect</p>`;
+            }else{
+                document.getElementById("msg").innerHTML = `<p class="text-danger">incorrect email or password</p>`;
+            }
+        }
+}
 
-// console.log("hii")
-// }
-// function checkValidity(){
-// signUpArray = JSON.parse(localStorage.getItem('user'))
-// var loo={
-//     email1:signInEmail.value,
-//     password1:signInPassword.value
-// }
-// for(let i=0;i<signUpArray.length;i++){
-// if(signUpArray[i].email==loo.email1 &&signUpArray[i].password==loo.password1){
-//     document.getElementById("msg").innerHTML = `<p class="text-success">Success</p>`   
-// }else{
-//      document.getElementById("msg").innerHTML = `<p class="text-danger">incorrect email or password</p>`
-// }
-// }
-// }
