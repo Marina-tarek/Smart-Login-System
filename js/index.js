@@ -1,13 +1,8 @@
 const signInEmail = document.getElementById("signInEmail");
 const signInPassword = document.getElementById("signInPassword");
-const logInPage = document.getElementById("logInPage");
-const signInBtn = document.getElementById("signInBtn")
-const inputs = document.querySelectorAll("input");
 const form = document.querySelector("form");
 const homeContainer = document.getElementById("homeContainer")
 const nav = document.querySelector("nav");
-
-
 let signUpArray;
 let isValid = false
 if (localStorage.getItem('user') == null) {
@@ -47,6 +42,6 @@ function checkValidity(){
 function welcome(name){
     homeContainer.classList.remove("d-none")
     nav.classList.remove("d-none")
-    logInPage.classList.add("d-none")
+    document.getElementById("logInPage").classList.add("d-none")
      document.getElementById("yourName").innerText = `Welcome  ${name}`;
     }

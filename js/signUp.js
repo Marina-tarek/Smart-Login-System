@@ -1,6 +1,3 @@
-const signUpName = document.getElementById("signUpName")
-const signUpEmail = document.getElementById("signUpEmail")
-const signUpPassword = document.getElementById("signUpPassword")
 const form = document.querySelector("form");
 const inputs = document.querySelectorAll("input");
 
@@ -33,14 +30,14 @@ form.addEventListener("input", function () {
 
 
 // =============> validation ===============>
-signUpName.addEventListener("input", function () {
+inputs[0].addEventListener("input", function () {
     validationName()
 })
 
-signUpEmail.addEventListener("input", function () {
+inputs[1].addEventListener("input", function () {
     validationEmail()
 })
-signUpPassword.addEventListener("input", function () {
+inputs[2].addEventListener("input", function () {
     validationPassword()
 })
 function validationName() {
@@ -105,7 +102,7 @@ function setForm() {
 
 //====> check email if used already
 function checkEmail() {
-    for (let i = 0; i <signUpArray.length; i++) {
+    for (let i = 0; i < signUpArray.length; i++) {
         if (signUpArray[i].email == signUpEmail.value) {
             return false
         }
