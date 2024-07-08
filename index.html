@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <!-- icon beside title -->
+    <link rel="icon" href="./16945747.png">
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,28 +21,37 @@
     <!--link  -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
-<main class="container my-5">
-    <div class="box-shadow m-auto p-5 w-75 text-center">
-        <h1 class="fw-medium text-capitalize">Smart Login System</h1>
-       <div class="w-100">
-        <input type="text" id="signInEemail" placeholder="Enter your email" class="form-control w-100 my-3 rounded-1" >
-       </div>
-       <div class="w-100">
-        <input type="password" id="signInPassword" placeholder="Enter your password" class="form-control w-100 my-3 rounded-1">
-       </div>
-       <p></p>
-       <button class="btn w-100 btn-outline-info my-3 rounded-1">Login</button>
-       <p class="sign">Don’t have an account? <a href="signUp.html" >Sign Up</a></p>
 
-    </div>
-</main>
+    <!-- log in page -->
+    <main class="container my-5">
+        <div class="box-shadow m-auto p-5 w-75 text-center">
+            <h1 class="fw-medium text-capitalize">Smart Login System</h1>
+            <form>
+                <div class="w-100">
+                    <input type="email" id="signInEmail" placeholder="Enter your email"
+                        class="form-control w-100 my-3 rounded-1">
+                </div>
+                <div class="w-100">
+                    <input type="password" id="signInPassword" placeholder="Enter your password"
+                        class="form-control w-100 my-3 rounded-1">
+                </div>
+                <div id="msg"></div>
+                <button id="signInBtn" class="btn w-100 btn-outline-info my-3 rounded-1">Login</button>
+            </form>
 
 
-<script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/index.js"></script>
+            <p class="sign">Don’t have an account? <a href="signUp.html">Sign Up</a></p>
+
+        </div>
+    </main>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="js/signUp.js"></script> -->
+    <script src="js/index.js"></script>
 </body>
 
 </html>

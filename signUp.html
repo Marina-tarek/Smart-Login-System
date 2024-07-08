@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>signUp</title>
+    <title>Login</title>
+    <!-- icon beside title -->
+    <link rel="icon" href="./16945747.png">
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,32 +24,33 @@
 </head>
 
 <body>
+    <!-- sign UP Page -->
     <main class="container my-5">
         <div class="box-shadow m-auto p-5 w-75 text-center">
             <h1 class="fw-medium text-capitalize">Smart Login System</h1>
-            <form action="">
+            <form id="formSignUp">
                 <div class="w-100">
                     <input type="text" id="signUpName" placeholder="Enter your name"
                         class="form-control w-100 my-3 rounded-1">
-                        <ul class="invalid-feedback text-start">
-                            <li>Name Is Required</li>
-                            <li>Must writer two characters at least</li>
-                        </ul>
+                    <ul class="invalid-feedback text-start">
+                        <li>Name Is Required</li>
+                        <li>Must writer two characters at least</li>
+                    </ul>
 
                 </div>
                 <div class="w-100">
                     <input type="email" id="signUpEmail" placeholder="Enter your email"
                         class="form-control w-100 my-3 rounded-1">
-                        <p class="invalid-feedback text-start">email Is Required</p>
+                    <p class="invalid-feedback text-start">email Is Required</p>
                 </div>
                 <div class="w-100">
                     <input type="password" id="signUpPassword" placeholder="Enter your password"
                         class="form-control w-100 my-3 rounded-1">
-                        <ul class="invalid-feedback text-start">
-                            <li>password Is Required</li>
-                            <li>Minimum eight characters, at least one letter and one number</li>
-                        </ul>
-                 
+                    <ul class="invalid-feedback text-start">
+                        <li>password Is Required</li>
+                        <li>Minimum eight characters, at least one letter and one number</li>
+                    </ul>
+
                 </div>
                 <div id="msg"></div>
                 <button id="signUpBtn" class="btn w-100 btn-outline-info my-3 rounded-1 text-capitalize">sign
@@ -60,8 +63,9 @@
     </main>
 
 
+
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/signUp.js"></script>
 </body>
 
 </html>
