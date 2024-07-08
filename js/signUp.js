@@ -45,7 +45,7 @@ signUpPassword.addEventListener("input", function () {
 })
 function validationName() {
     const regexStyle = /^(?:[a-zA-Z0-9\s@,=%$#&_\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF\uFB50-\uFDCF\uFDF0-\uFDFF\uFE70-\uFEFF]|(?:\uD802[\uDE60-\uDE9F]|\uD83B[\uDE00-\uDEFF])){2,20}$/
-    if (regexStyle.test(inputs[0].value)) {
+    if (regexStyle.test(inputs[0].value.toLowerCase())) {
         inputs[0].classList.add("is-valid")
         inputs[0].classList.remove("is-invalid")
         return true
@@ -57,8 +57,9 @@ function validationName() {
     }
 }
 function validationEmail() {
-    const regexStyle = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/
-    if (regexStyle.test(inputs[1].value)) {
+    // /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/
+    const regexStyle = /^[a-zA-Z]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+    if (regexStyle.test(inputs[1].value.toLowerCase())) {
         inputs[1].classList.add("is-valid")
         inputs[1].classList.remove("is-invalid")
         return true
@@ -70,7 +71,7 @@ function validationEmail() {
 }
 function validationPassword() {
     const regexStyle = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/
-    if (regexStyle.test(inputs[2].value)) {
+    if (regexStyle.test(inputs[2].value.toLowerCase())) {
         inputs[2].classList.add("is-valid")
         inputs[2].classList.remove("is-invalid")
         return true
@@ -86,9 +87,9 @@ function validationPassword() {
 // =====> set form and storage data
 function setForm() {
     const user = {
-        name: signUpName.value,
-        email: signUpEmail.value,
-        password: signUpPassword.value,
+        name: inputs[0].value,
+        email: inputs[1].value,
+        password: inputs[2].value,
     }
     console.log(user);
     if (checkEmail() == false) {

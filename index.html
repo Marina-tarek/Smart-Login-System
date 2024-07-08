@@ -25,9 +25,31 @@
 </head>
 
 <body>
+ <!-- HOME PAGE -->
+    <!-- navbar  -->
+    <nav class="navbar d-none navbar-expand-lg header box-shadow ">
+        <div class="container">
+            <a class="navbar-brand" href="#">SMART LOGIN</a>
+            <ul class="m-0">
+                <li class="nav-item list-unstyled">
+                    <a href="index.html" class="text-capitalize logOut-btn btn btn-outline-warning m-auto">log out</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--main section contain user name  -->
+    <section id="homeContainer" class="d-none">
+        <div class="container d-flex justify-content-center align-items-center my-5">
+            <div class="content box-shadow w-75 text-center m-5 p-5">
+                <h1 id="yourName" class="text-capitalize"></h1>
+            </div>
+        </div>
+
+    </section>
+
 
     <!-- log in page -->
-    <main class="container my-5">
+    <main id="logInPage" class="container my-5">
         <div class="box-shadow m-auto p-5 w-75 text-center">
             <h1 class="fw-medium text-capitalize">Smart Login System</h1>
             <form>
@@ -39,7 +61,7 @@
                     <input type="password" id="signInPassword" placeholder="Enter your password"
                         class="form-control w-100 my-3 rounded-1">
                 </div>
-                <div id="msg"></div>
+                <div id="notes"></div>
                 <button id="signInBtn" class="btn w-100 btn-outline-info my-3 rounded-1">Login</button>
             </form>
 
@@ -50,7 +72,6 @@
     </main>
 
     <script src="js/bootstrap.bundle.min.js"></script>
-    <!-- <script src="js/signUp.js"></script> -->
     <script src="js/index.js"></script>
 </body>
 
